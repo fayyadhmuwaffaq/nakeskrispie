@@ -70,14 +70,6 @@
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
     }
-    /* Subtle pulse animation for floating WA */
-    @keyframes subtle-bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-4px); }
-    }
-    .floating-cta {
-      animation: subtle-bounce 3s ease-in-out infinite;
-    }
   </style>
 </head>
 <body class="bg-[#fafdfa] text-slate-800 font-sans antialiased selection:bg-brand-600 selection:text-white">
@@ -720,10 +712,6 @@
     // Nomor WhatsApp Resmi (Bisa disesuaikan dengan mudah)
     const WA_ADMIN_PHONE = "6281234567890";
 
-    /**
-     * Generator pesan WhatsApp Direct-to-Consumer sesuai PRD:
-     * "Halo Admin, saya tertarik memesan Paket [Nama Paket] Nugget Kelor Gluten-Free. Mohon info ketersediaan stok & ongkir ke [Nama Kota]."
-     */
     function orderViaWA(packageName, price) {
       let productRef = '';
       if (packageName && !['0', 'Pesan', 'Pesan Sekarang', 'Pesan Navbar', 'Pesan Mobile', 'Floating Widget Cepat'].includes(packageName)) {
